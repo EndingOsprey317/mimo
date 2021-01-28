@@ -25,16 +25,16 @@ END
 
 TO Triangle
  Make "Radius "1
-	PD
-	Repeat 150 [
-		Forward :Radius/2
-		Back :Radius
-		Forward :Radius/2
-		PU
-		Right 90
-		Forward 1
-		Left 90
-		Make "Radius "1 + Radius
-		PD
-	]
+ PD
+ Repeat 150 [
+  Forward :Radius/2
+  Back :Radius
+  Forward :Radius/2
+  PU
+  Right 90
+  Forward 1
+  Left 90
+  Make "Radius "1 + Radius
+  PD
+ ]
 END
