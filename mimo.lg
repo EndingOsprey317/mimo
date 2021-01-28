@@ -1,0 +1,40 @@
+TO Polygon :Length :Sides
+ REPEAT :Sides [
+  FORWARD :Length
+  RIGHT 360/:Sides 
+ ]
+END
+
+TO Circle :Drawn :Radius
+ PU
+ Forward :Radius
+ PD
+ Arc :Drawn :Radius
+ PU
+ Back :Radius
+END
+
+TO Cone
+ Make "Radius "1
+ PD
+ Repeat 150 [
+  Circle 360 :Radius
+  Make "Radius "1 + Radius
+ ]
+END
+
+TO Triangle
+ Make "Radius "1
+	PD
+	Repeat 150 [
+		Forward :Radius/2
+		Back :Radius
+		Forward :Radius/2
+		PU
+		Right 90
+		Forward 1
+		Left 90
+		Make "Radius "1 + Radius
+		PD
+	]
+END
