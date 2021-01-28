@@ -38,3 +38,12 @@ TO Triangle
   PD
  ]
 END
+
+TO Five_Square
+ PD
+ Repeat 4 [
+  Polygon 100 4
+  Right 90
+  Forward 100
+ ]
+END
